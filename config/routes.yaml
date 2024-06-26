@@ -1,3 +1,27 @@
-#index:
-#    path: /
-#    controller: App\Controller\DefaultController::index
+createVersion:
+   path: /createVersion
+   controller: App\Controller\QuestionnaireContronller::createVersion
+
+createQuestion:
+   path: /createQuestion
+   controller: App\Controller\QuestionnaireContronller::createQuestion
+
+createQuestionOptions:
+   path: /createQuestionOptions
+   controller: App\Controller\QuestionnaireContronller::createQuestionOptions
+
+createAnswer:
+   path: /answerQuestion
+   controller: App\Controller\QuestionnaireContronller::answerQuestion
+
+getFullQuestionnaireByVersion:
+   path: /getQuestionnaireByVersionId
+   controller: App\Controller\QuestionnaireContronller::getFullQuestionnaireByVersion
+
+createProduct:
+   path: /createProduct
+   controller: App\Controller\ProductController::createProduct
+
+updateProduct:
+   path: /updateProduct/{id}
+   controller: App\Controller\ProductController::updateProduct
