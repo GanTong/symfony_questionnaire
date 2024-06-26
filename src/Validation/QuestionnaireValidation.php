@@ -237,6 +237,8 @@ class QuestionnaireValidation
     }
 
     /**
+     * validation for creating a product
+     *
      * @param string $productIdentifier
      * @param string $behaviourDescription
      * @param string $behaviourConfiguration
@@ -252,13 +254,9 @@ class QuestionnaireValidation
             new NotBlank()
         ]);
 
-//        dd('here1');
-
         $violations2 = $validator->validate($behaviourDescription, [
             new Length(['max' => 500])
         ]);
-
-//        dd('here2');
 
         $violations3 = $validator->validate($behaviourConfiguration, [
             new Regex(
@@ -287,7 +285,6 @@ class QuestionnaireValidation
                 throw new InvalidArgumentException($violation->getMessage());
             }
         }
-
     }
 
 }

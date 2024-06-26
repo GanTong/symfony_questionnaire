@@ -31,6 +31,8 @@ class QuestionnaireContronller extends AbstractController
     }
 
     /**
+     * @Route("/createVersion", name="createVersion")
+     *
      * @param Request $request
      * @return Response
      */
@@ -53,6 +55,8 @@ class QuestionnaireContronller extends AbstractController
     }
 
     /**
+     * @Route("/createQuestion", name="createQuestion")
+     *
      * @param Request $request
      * @return Response
      */
@@ -82,6 +86,8 @@ class QuestionnaireContronller extends AbstractController
     }
 
     /**
+     * @Route("/createQuestionOptions", name="createQuestionOptions")
+     *
      * @param Request $request
      * @return Response
      */
@@ -106,6 +112,8 @@ class QuestionnaireContronller extends AbstractController
     }
 
     /**
+     * @Route("/answerQuestion", name="createAnswer")
+     *
      * @param Request $request
      * @return Response
      */
@@ -140,6 +148,8 @@ class QuestionnaireContronller extends AbstractController
     }
 
     /**
+     * @Route("/getQuestionnaireByVersionId", name="getFullQuestionnaireByVersion")
+     *
      * @param Request $request
      * @return Response
      */
