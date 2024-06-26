@@ -109,6 +109,15 @@ class ProductService
         ];
     }
 
+    /**
+     * create a product
+     *
+     * @param string $productIdentifier
+     * @param string $behaviourDescription
+     * @param string $behaviourConfig
+     * @param string $restrictionDescription
+     * @return array
+     */
     public function createProduct(string $productIdentifier, string $behaviourDescription, string $behaviourConfig, string $restrictionDescription): array
     {
         // validate request
@@ -131,12 +140,21 @@ class ProductService
         ];
     }
 
+    /**
+     * update a product by id
+     *
+     * @param $id
+     * @param array $data
+     * @return Products
+     */
     public function updateProduct($id, array $data): Products
     {
+        // find a product by id
         if(!$product = $this->productsRepository->find($id)) {
             throw new NotFoundHttpException('Product is not found.');
         }
 
+        // set fields if available
         if (isset($data['product_identifier'])) {
             $product->setProductIdentifier($data['product_identifier']);
         }
